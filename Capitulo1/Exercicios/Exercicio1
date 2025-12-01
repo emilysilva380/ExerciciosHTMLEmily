@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+</head>
+
+<body>
+
+    <h1>Tabelas</h1>
+
+    <h2>Célula com 2 colunas:</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        <tr>
+            <td>Nathalia</td>
+            <td>(22) 99999999 / (22) 88888888</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <h2>Célula com 2 linhas:</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Nome</th>
+            <td>Julia</td>
+        </tr>
+        <tr>
+            <th>Telefone</th>
+            <td>(22)77777777 / (22) 66666666</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <h2>Tabela com Legenda</h2>
+    <figure>
+        <figcaption><strong>Total de despesas por mês</strong></figcaption>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Mês</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>Novembro</td>
+                <td>R$ 2.700,00</td>
+            </tr>
+            <tr>
+                <td>Agosto</td>
+                <td>R$ 1.910,00</td>
+            </tr>
+        </table>
+    </figure>
+
+    <br><hr>
+
+    <p>
+        <a  href="/ExerciciosHTML">Voltar ao Sumário</a>
+    </p>
+
