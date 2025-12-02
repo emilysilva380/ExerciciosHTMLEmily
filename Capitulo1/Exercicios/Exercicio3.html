@@ -164,6 +164,21 @@
                     <p class="info-text">Modelos sugeridos: Laptop Pro, Tablet Slim, Smartwatch X</p>
                 </div>
 
+                <!-- Comprovante de Compra (Upload) -->
+                <div class="form-group">
+                    <label for="comprovante" class="required">Comprovante de Compra (Upload)</label>
+                    <input
+                        type="file"
+                        id="comprovante"
+                        name="comprovante"
+                        required
+                        accept=".jpg,.jpeg,.png,application/pdf"
+                        title="Envie uma imagem (.jpg, .png) ou um PDF (.pdf) como comprovante"
+                    >
+                    <p class="info-text">Aceito: <strong>.jpg</strong>, <strong>.png</strong>, <strong>.pdf</strong>. Tamanho máximo recomendado: 5MB.</p>
+                    <span class="info-text" id="comprovanteNome" aria-live="polite"></span>
+                </div>
+
             </fieldset>
 
             <!-- SEÇÃO 3: OPÇÕES DE ENVIO -->
@@ -255,6 +270,8 @@
         const corTexto = document.getElementById('corTexto');
         const comentariosInput = document.getElementById('comentarios');
         const charCounter = document.getElementById('charCounter');
+        const comprovanteInput = document.getElementById('comprovante');
+        const comprovanteNome = document.getElementById('comprovanteNome');
         const formulario = document.getElementById('formularioPedidos');
 
         // Evento para atualizar o valor da quantidade
@@ -284,6 +301,18 @@
                 charCounter.classList.remove('error', 'warning');
             }
         });
+
+        // Evento para exibir o nome do arquivo escolhido (UX)
+        if (comprovanteInput) {
+            comprovanteInput.addEventListener('change', function() {
+                const file = this.files && this.files[0];
+                if (file) {
+                    comprovanteNome.textContent = `Arquivo selecionado: ${file.name}`;
+                } else {
+                    comprovanteNome.textContent = '';
+                }
+            });
+        }
 
         // Submissão do formulário
         formulario.addEventListener('submit', function(e) {
